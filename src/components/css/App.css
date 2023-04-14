@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+:root {
+  --background: #b187d3;
+  --textShaddow: #4c0874;
+  --pinkRed: #ed6a5a;
+}
+.App {
+  background-color: var(--background);
+  color: white;
+  width: 100%;
+  min-height: 100vh;
+}
+/* TITLE */
+.title h1 {
+  /* font-size: 100px; */
+  padding: 2%;
+  text-align: center;
+  font-family: "Titan One", cursive;
+  letter-spacing: 2px;
+  font-weight: lighter;
+  text-shadow: var(--textShaddow) 8px 10px;
+  transition: 0.3s;
+  margin: 10px;
+}
+.title h1:hover {
+  text-shadow: white 8px 10px;
+  color: var(--textShaddow);
+}
+#header {
+  height: 100vh;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  background-image: url(../../components/images/spring2023.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: 0.4s ease-out;
+  margin: auto;
+}
+#title {
+  position: fixed;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* ABOUT */
+
+.aboutWhole {
+  min-height: 100vh;
+  border-style: solid;
+  border-left: 0;
+  border-bottom: 0;
+  border-right: 0;
+  background-color: white;
+}
+
+/* ---------------MEDIA--------------------- */
+
+@media only screen and (max-width: 850px) {
+  #header {
+    background-image: url(../../components/images/spring2023_mobile.png);
+    font-size: 40px !important;
+  }
+}
+@media only screen and (max-width: 570px) {
+  #header {
+    background-image: url(../../components/images/spring2023_mobile_Phone.png);
+    font-size: 30px !important;
+  }
+}
