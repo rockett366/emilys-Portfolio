@@ -17,14 +17,11 @@ window.onscroll = function () {
 function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     //when scroll
-    document.getElementById("header").style.paddingTop = "0";
-    document.getElementById("header").style.fontSize = "30px";
-    document.getElementById("title").style.backgroundColor = "#b187d3af";
+    document.getElementById("header").style.backgroundSize = "150%";
   } else {
     //when normal
-    document.getElementById("header").style.paddingTop = "40vh";
-    document.getElementById("header").style.fontSize = "60px";
-    document.getElementById("title").style.backgroundColor = "transparent";
+    document.getElementById("header").style.backgroundSize = "100%";
   }
 }
+
 export default Header;

@@ -2,7 +2,10 @@
 :root {
   --background: #b187d3;
   --textShaddow: #4c0874;
-  --pinkRed: #ed6a5a;
+  --pinkRed: #fe8497;
+}
+body {
+  scroll-behavior: smooth;
 }
 .App {
   background-color: var(--background);
@@ -10,17 +13,20 @@
   width: 100%;
   min-height: 100vh;
 }
+h2 {
+  font-size: 40px;
+}
+
 /* TITLE */
 .title h1 {
-  /* font-size: 100px; */
+  font-size: 100px;
   padding: 2%;
   text-align: center;
   font-family: "Titan One", cursive;
   letter-spacing: 2px;
   font-weight: lighter;
   text-shadow: var(--textShaddow) 8px 10px;
-  transition: 0.3s;
-  margin: 10px;
+  transition: 0.6s;
 }
 .title h1:hover {
   text-shadow: white 8px 10px;
@@ -31,16 +37,17 @@
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  background-image: url(../../components/images/spring2023.png);
+  background-image: url(../../components/images/spring2023_mobile.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
   transition: 0.4s ease-out;
   margin: auto;
+  transition: 0.3s;
+  scroll-behavior: smooth;
 }
 #title {
-  position: fixed;
   transition: 0.3s;
   display: flex;
   justify-content: center;
@@ -58,6 +65,48 @@
   border-bottom: 0;
   border-right: 0;
   background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bubbleBox {
+  display: flex;
+}
+
+.imgFloat,
+.imgFloat_Two {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  background: url(../../components/images/bubbles.png) repeat-x;
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: cover; */
+  background-attachment: fixed;
+  border-style: solid;
+  transition: 0.3s;
+  animation: animate-background linear 52s infinite;
+}
+@keyframes animate-background {
+  from {
+    background-position: -20px;
+  }
+  to {
+    background-position: -3000px;
+  }
+}
+.imgFloat {
+  margin-top: -17%;
+  margin-left: 2%;
+}
+.imgFloat_Two {
+  margin-left: -7%;
+  margin-bottom: -12%;
+}
+
+.aboutText {
+  text-align: center;
+  width: 400px;
 }
 
 /* ---------------MEDIA--------------------- */
@@ -67,10 +116,12 @@
     background-image: url(../../components/images/spring2023_mobile.png);
     font-size: 40px !important;
   }
+  .bubbleBox {
+    display: none;
+  }
 }
 @media only screen and (max-width: 570px) {
   #header {
-    background-image: url(../../components/images/spring2023_mobile_Phone.png);
     font-size: 30px !important;
   }
 }

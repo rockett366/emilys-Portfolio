@@ -4,10 +4,13 @@ import About from "./components/About.js";
 
 function App() {
   return (
-    <div className="">
-      <Header />
-      <About />
-    </div>
+    <body>
+      <div className="">
+        <Header />
+        <About />
+        <About />
+      </div>
+    </body>
   );
 }
 
